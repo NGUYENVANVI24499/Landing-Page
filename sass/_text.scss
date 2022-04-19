@@ -1,0 +1,14 @@
+h1,h2,h3,h4,h5,h6{
+    color:$header-coler;
+    font-weight: bolder;
+}
+.heading{
+    font-weight: 500;
+    font-size: 35rem;
+    line-height: calc(50/35);
+    margin-bottom: 20rem;
+    text-transform: capitalize;
+}
+.text{
+    line-height: calc(30/16);
+}

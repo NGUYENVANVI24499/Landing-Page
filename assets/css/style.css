@@ -1,0 +1,295 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.2 linear;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+*::after,
+*::after {
+  box-sizing: border-box;
+}
+
+input, section, textarea, button {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  line-height: normal;
+  border: none;
+}
+
+label, button {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  outline: none;
+  background-color: initial;
+  border: none;
+  cursor: pointer;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  background-color: white;
+  color: #4F5665;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 1.3rem 3rem;
+  border-radius: 100rem;
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-align: center;
+  white-space: nowrap;
+}
+.button--primary {
+  font-weight: 700;
+  background-color: #F53838;
+  color: white;
+}
+.button--outline {
+  background-color: transparent;
+  color: #F53838;
+  font-weight: 500;
+  border: 1px solid;
+}
+.button--rounder {
+  border-radius: 10px;
+  padding: 1.7rem 6.5rem;
+  box-shadow: 0 3rem 5.4rem -5px rgba(245, 56, 56, 0.35);
+}
+.button--shadom {
+  position: relative;
+}
+.button--shadom:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 90%;
+  height: 100%;
+  transform: translate(-50%, 50%);
+  background-color: rgba(245, 56, 56, 0.35);
+  filter: blur(54px);
+  border-radius: inherit;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: "Rubik", sans-serif;
+}
+
+@media (max-width: 1023px) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide-for-desktop {
+    display: none !important;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #0B132A;
+  font-weight: bolder;
+}
+
+.heading {
+  font-weight: 500;
+  font-size: 35rem;
+  line-height: 1.4285714286;
+  margin-bottom: 20rem;
+  text-transform: capitalize;
+}
+
+.text {
+  line-height: 1.875;
+}
+
+.header {
+  position: relative;
+}
+.header nav {
+  padding: 1rem;
+}
+.header__toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__toggle::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  background-color: hsl(233deg, 26%, 24%);
+  transform: translateY(-10px);
+  box-shadow: 0 10px hsl(233deg, 26%, 24%);
+  transition: 0.5s linear;
+}
+.header__toggle::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 30px;
+  background-color: hsl(233deg, 26%, 24%);
+  transform: translateY(10px);
+  transition: 0.3s linear;
+}
+.header__menu {
+  display: none;
+  background: white;
+  padding: 2.6rem;
+  position: absolute;
+  width: calc(100% - 10rem);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.header__menu a {
+  color: hsl(233deg, 26%, 24%);
+  padding: 1rem;
+  font-size: 1.4rem;
+  display: block;
+  text-align: center;
+}
+.header__link a {
+  position: relative;
+  color: hsl(233deg, 8%, 62%);
+  font-size: 1.4rem;
+}
+.header__link a:not(:last-child) {
+  margin-right: 32px;
+}
+.header__link a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  bottom: -23px;
+}
+.header__link a:hover {
+  color: hsl(233deg, 26%, 24%);
+}
+.header__link a:hover::before {
+  background-color: hsl(136deg, 65%, 51%);
+}
+
+header nav.active .header__toggle::before {
+  transform: translateY(0) rotate(45deg) !important;
+  box-shadow: 0 0 hsl(233deg, 26%, 24%);
+}
+
+header nav.active .header__toggle::after {
+  transform: translateY(0) rotate(-45deg) !important;
+}
+
+header nav.active .header__toggle .overlay {
+  position: fixed;
+  inset: 62px 0 0 0;
+  background-image: linear-gradient(hsl(233deg, 26%, 24%), transparent);
+  transition: all linear;
+  transition: height 0.5s, width 0.5s;
+}
+
+.header__menu.active {
+  display: block;
+}
+
+@keyframes fade-in {
+  from {
+    visibility: visible;
+    opacity: 0;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+/*# sourceMappingURL=style.css.map */
