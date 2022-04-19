@@ -97,7 +97,7 @@ body {
 }
 .button--primary {
   font-weight: 700;
-  background-color: #F53838;
+  background-color: hsl(136deg, 65%, 51%);
   color: white;
 }
 .button--outline {
