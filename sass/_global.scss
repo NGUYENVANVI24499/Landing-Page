@@ -7,6 +7,14 @@
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+    &--padding{
+        padding-top: 7rem;
+        padding-bottom: 6rem;
+        @include breakpoint-up(large){
+            padding-top: 9rem;
+            padding-bottom: 8rem;
+        }
+    }
 }
 html{
     font-size: 62.5%;
@@ -96,3 +104,4 @@ button{
     }
     
 }
+
